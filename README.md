@@ -2,7 +2,8 @@
 
 SDT (SPC Setup & Data File) and PTU FLIM analysis written in Python by Paula Zhu
 
-for MCB68 class project
+for MCB68 class project by Paula Zhu and Sammy Guerrero
+
 
 Largely inspired from examples:
 - stdfile
@@ -15,10 +16,12 @@ Largely inspired from examples:
   https://github.com/PicoQuant/PicoQuant-Time-Tagged-File-Format-Demos
 - from a jupyter notebook by tritemio on GitHub:
   https://gist.github.com/tritemio/734347586bc999f39f9ffe0ac5ba0e66
+- pyTCSPC
+  https://github.com/easunarunachalam/pyTCSPC
 
 
 ## Requirements
-- python3
+- python 3.10
 
 ```python
 import dask.array as dr

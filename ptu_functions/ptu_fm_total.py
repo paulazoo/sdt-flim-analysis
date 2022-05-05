@@ -72,24 +72,24 @@ print("getting time bins...")
 # in nanoseconds (1e9)
 time_bins = np.linspace(0,ptu_image_0.shape[2],ptu_image_0.shape[2], dtype = np.int)*(ptu_head["MeasDesc_Resolution"]*1e9)
 
-# no sr
-# def as_strided2d(a, K):
-#     b = a
-#     view = np.lib.stride_tricks.as_strided(a,
-#         shape=(K, K, a.shape[0] - (K-1), a.shape[1] - (K-1)),
-#         strides=a.strides * 2
-#     )
-#     b[2:-2, 2:-2] = view.sum(axis=(0, 1))
-#     return b
+# sr
+def as_strided2d(a, K):
+    b = a
+    view = np.lib.stride_tricks.as_strided(a,
+        shape=(K, K, a.shape[0] - (K-1), a.shape[1] - (K-1)),
+        strides=a.strides * 2
+    )
+    b[2:-2, 2:-2] = view.sum(axis=(0, 1))
+    return b
 
-# # local binning size
-# K = 5
+# local binning size
+K = 5
 
-# print('starting sr...')
-# # for all along time bin axis
-# ptu_image_sr = np.array([as_strided2d(slice, K) for slice in np.rollaxis(ptu_image.values, 2)])
-# print('finished, rolling axis...')
-# ptu_image_s = np.rollaxis(ptu_image_sr, 0, start=3)
+print('starting sr...')
+# for all along time bin axis
+ptu_image_sr = np.array([as_strided2d(slice, K) for slice in np.rollaxis(ptu_image.values, 2)])
+print('finished, rolling axis...')
+ptu_image_s = np.rollaxis(ptu_image_sr, 0, start=3)
 
 
 def fm_analysis(ptu_image, int_image, time_bins_np, phot_cut=0):

@@ -1,6 +1,6 @@
 # FLIM analysis
 
-SDT (SPC Setup & Data File) and PTU FLIM analysis written in Python by Paula Zhu
+SDT (SPC Setup & Data File) and PTU (PicoQuant Unified TTTR File) FLIM analysis written in Python by Paula Zhu
 
 for MCB68 class project by Paula Zhu and Sammy Guerrero
 

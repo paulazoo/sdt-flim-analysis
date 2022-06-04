@@ -2,6 +2,11 @@
 
 SDT (SPC Setup & Data File) and PTU (PicoQuant Unified TTTR File) FLIM analysis written in Python by Paula Zhu
 
+- for both SDT and PTU files
+- first moment analysis
+- 2-exp (2 fluorophore) fitting analysis
+- hsv combined lifetime and intensity images
+
 for MCB68 class project by Paula Zhu and Sammy Guerrero
 
 

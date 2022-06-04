@@ -1,4 +1,4 @@
-# FLIM analysis
+# FLIM (Fluorescence Lifetime Imaging Microscopy) analysis
 
 SDT (SPC Setup & Data File) and PTU (PicoQuant Unified TTTR File) FLIM analysis written in Python by Paula Zhu
 
@@ -6,9 +6,7 @@ SDT (SPC Setup & Data File) and PTU (PicoQuant Unified TTTR File) FLIM analysis 
 - first moment analysis
 - 2-exp (2 fluorophore) fitting analysis
 - hsv combined lifetime and intensity images
-
-for MCB68 class project by Paula Zhu and Sammy Guerrero
-
+- 
 
 Largely inspired from examples:
 - stdfile
@@ -63,3 +61,6 @@ import zarr
 sys.path.append(pc_dir + "pyTCSPC")
 import pyTCSPC as pc
 ```
+
+
+for MCB68 class project by Paula Zhu and Sammy Guerrero
